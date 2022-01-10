@@ -10,11 +10,12 @@ def index():
         if request.method == "POST":
             dec_number = request.form["dec_number"]
             res = calculate_serial(int(dec_number))
-            return render_template("output.html", res=res)
+            return render_template("output.html", res="Votre code est " + res)
         else:
             return render_template("index.html")
     except ValueError:
-        return render_template("output.html", res="stderr: Valeur null")
+        return render_template("output.html", res="ERREUR: Valeur null")
+
 
 @app.route('/home', methods = ['GET', 'POST'])
 def home():
