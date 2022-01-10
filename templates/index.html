@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top: 30pt;">
+    <h2 style="margin-bottom: 15pt;">Calculateur de code</h2>
+
+    <!--    muh form-->
+    <form action="/" method="POST" class="row row-cols-lg-auto g-3 align-items-center">
+        <div class="col-12">
+            <label class="visually-hidden" for="dec_number">Entrez le numéro</label>
+            <div class="input-group">
+                <div class="input-group-text">&#8984;</div>
+                <input type="text" class="form-control" id="dec_number" name="dec_number"
+                       placeholder="Entrez le numéro">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <!-- <input type="submit" class="btn btn-primary" style="margin-right: 5pt;" value="Calculer">-->
+            <!-- Button trigger modal -->
+            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Calculer
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            {{ res }}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+
+</div>
+{% endblock %}
+
