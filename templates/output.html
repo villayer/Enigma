@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top: 30pt;">
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading" id="leCode">{{ res }}</h4>
+    <hr>
+    <a class="btn btn-primary btn-sm" href="{{ url_for('home') }}">Page d'accueil</a>
+    <button type="button" class="btn btn-secondary btn-sm" onclick="CopyToCB()">Copier dans le presse-papier</button>
+</div>
+</div>
+{% endblock %}
