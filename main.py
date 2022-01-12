@@ -10,7 +10,7 @@ def index():
         if request.method == "POST":
             dec_number = request.form["dec_number"]
             res = calculate_serial(int(dec_number))
-            return render_template("output.html", res="Votre code est " + res)
+            return render_template("output.html", res="Votre code est " + res, code=res)
         else:
             return render_template("index.html")
     except ValueError:
