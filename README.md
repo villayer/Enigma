@@ -1,1 +1,2 @@
-this program uses html as it's for frontend, it will be migrated to react soon(tm)
+# Using this tool
+go to https://hexcalcdemo.herokuapp.com/home and enter the t-shot from your device
